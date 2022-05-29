@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>
+            電腦教室借用管理系統
+        </h1>
+        <div class="header_a">
+            <a href="#">登入</a>
+        </div>
+    </div>
+    <div class="items">
+        <div class="captcha"></div>
+    </div>
+    <p>
+    <div class="txt" style="text-align: center;">由小到大</div>
+    </p>
+    <div class="items">
+        <div class="item_verify"></div>
+    </div>
+</body>
+
+<script>
+    const code = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    function renew() {
+        $('.item_verify').empty('')
+        $('.captcha').empty('')
+        const input = []
+        user_inp = []
+
+        for (let i = 0; i < 4; i++) {
+            let cont = code[parseInt(Math.random() * code.length)]
+
+            input.push(cont)
+            let img = './captcha.php?cont=' + cont
+            const image = document.createElement('img')
+            image.className = 'captcha_image'
+            image.dataset.id = cont
+            image.src = img
+
+
+            $('.captcha').append(image)
+        }
+
+        $('.captcha_image').draggable({
+            revert: true
+        })
+
+        input.sort()
+        input.map(inp => {
+            $('.item_verify').append($(`<div class="verifyDiv" data-id="${inp}"></div>`))
+
+            $('.verifyDiv').droppable({
+                accept: '.captcha_image',
+                tolerance: 'pointer',
+
+                drop: function (event, ui) {
+                    if (ui.draggable[0].dataset.id == event.target.dataset.id) {
+                        $(this).text(ui.draggable[0].dataset.id)
+                        user_inp.push(ui.draggable[0].dataset.id)
+                    } else {
+                        alert('順序錯誤')
+                    }
+
+                    if (user_inp.length == 4) {
+                        let num = 0
+                        console.log(user_inp)
+                        for (let i = 0; i < 4; i++) {
+                            if (input[i] == user_inp[i]) {
+                                console.log('true')
+                                num += 1
+                            } else {
+                                alert('系統錯誤')
+                                break
+                            }
+
+                            if (num == 4) {
+                                location.href = 'index.php'
+                            }
+                        }
+                        renew()
+                    }
+                }
+            })
+        })
+
+    }
+    renew()
+
+
+
+</script>
+
+</html>

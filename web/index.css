@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    color: black;
+}
+
+.header {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 1px 2px rgb(228, 228, 234);
+    display: flex;
+
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.header>h1 {
+    margin: 15px 0px 10px 20px;
+}
+
+.header>h1>a {
+    text-decoration: none;
+    color: black;
+}
+
+.header_a {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header_a>a {
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0px 30px;
+    padding: 10px;
+}
+
+.header_a>a:hover {
+    background-color: rgb(206, 233, 249);
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 110px;
+}
+
+.item_header {
+    display: flex;
+}
+
+.item_main {
+    display: flex;
+}
+
+.header_time {
+    text-align: center;
+    width: 200px;
+    border: 1px solid #999;
+}
+
+.header_work {
+    text-align: center;
+    width: 600px;
+    border: 1px solid #999;
+}
+
+.times {
+    width: 200px;
+}
+
+.time {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #999;
+    font-size: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works {
+    width: 600px;
+    position: relative;
+}
+
+.work {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #999;
+}
+
+.todo {
+    border: 1px solid #999;
+    background-color: rgb(204, 223, 244);
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.items>form {
+    width: 350px;
+    height: 250px;
+    border: 1px solid #999;
+    border-radius: 5px;
+
+    margin-top: 80px;
+}
+
+.items>form>h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.items>form>.text {
+    margin: 15px 0px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.items>form>.text>input {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.sub {
+    width: 60px;
+    margin: 0px 10px 0px 10px;
+
+    cursor: pointer;
+}
+
+.captcha_image {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.item_verify {
+    display: flex;
+}
+
+.verifyDiv {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #999;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.myuser_box {
+    width: 800px;
+    height: 530px;
+    border: 1px solid #999;
+    border-radius: 10px;
+}
+
+.myuser_box>form {
+    width: 100%;
+    height: 100%;
+}
+
+.myuser_main>h1 {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.myuser_img {
+    margin: 15px 20px;
+    border-bottom: 1px solid #999;
+
+    display: flex;
+    justify-content: center;
+}
+
+.myuser_img>img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.myuser_user {
+    display: flex;
+    justify-content: center;
+}
+
+.myuser_user>p {
+    margin: 5px 20px;
+}
+
+.myuser_text {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.myuser_select {
+    display: flex;
+    justify-content: center;
+}
+
+.myuser_select>input {
+    width: 70px;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+
+    margin: 20px;
+    font-size: 16px;
+}
+
+.myuser_messages {
+    width: 800px;
+    height: 190px;
+    margin-top: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(215, 214, 214);
+    border-radius: 10px;
+}
+
+.my_message {
+    border: 1px solid #999;
+    width: 230px;
+    height: 120px;
+    border-radius: 5px;
+    /* padding: 10px; */
+    margin: 15px;
+    position: relative;
+}
+
+.message_main {
+    margin: 5px;
+}
+
+.my_message_col {
+    background-color: rgb(165, 238, 152);
+}
+
+.state_main {
+    width: 800px;
+    height: 500px;
+    border: 1px solid #999;
+    border-radius: 10px;
+
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(215, 214, 214);
+    border-radius: 22px;
+}
+
+.state {
+    width: 740px;
+    height: 200px;
+    border: 1px solid #999;
+    border-radius: 10px;
+
+    margin: 25px auto;
+    display: flex;
+}
+
+.state_mains {
+    width: 100%;
+    margin: 8px 0px;
+    padding: 8px 16px;
+    border-left: 1px solid rgb(212, 211, 211);
+
+    position: relative;
+}
+
+.state_row {
+    margin: 4px 0px;
+}
+
+.selector {
+    position: absolute;
+    right: 15px;
+    bottom: 8px;
+}
+
+.my_user_selector {
+    position: absolute;
+    right: 6px;
+    bottom: 10px;
+}
+
+.state_selector {
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid#999;
+    border-radius: 5px;
+    background-color: rgb(169, 230, 251);
+
+}
+
+.new {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.new>button {
+    width: 70px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.classroom_box {
+    width: 800px;
+    height: 430px;
+    border: 1px solid #999;
+    border-radius: 10px;
+}
+
+.classroom_box>form {
+    width: 100%;
+    height: 100%;
+}
+
+.classroom_box>form>h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+.classroom_user {
+    display: flex;
+    justify-content: center;
+}
+
+.classroom_user>p {
+    margin: 10px 20px;
+}
+
+.classroom_user>p>input {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.classroom_user>p>select {
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 18px;
+}
+
+.classroom_text {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.classroom_select {
+    display: flex;
+    justify-content: center;
+}
+
+.classroom_select>input {
+    width: 70px;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+
+    margin: 20px;
+    font-size: 16px;
+}

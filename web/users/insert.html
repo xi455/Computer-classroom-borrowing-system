@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="users.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>
+            <a href="../index.php">
+                電腦教室借用管理系統
+            </a>
+        </h1>
+        <div class="header_a">
+            <a href="../index.php" style="background-color: rgb(206, 233, 249);">返回</a>
+        </div>
+    </div>
+
+    <div class="items">
+        <div class="insert_box">
+            <form action="insertprocess.php" method="post">
+                <h1>帳號申請</h1>
+
+                <div class="insert_img">
+                    <img src="../user.png" alt="">
+                </div>
+
+                <div class="insert_user">
+                    <p>
+                        帳號：<input type="text" name="user" placeholder="請輸入帳號">
+                    </p>
+                    <p>
+                        密碼：<input type="text" name="pwd" placeholder="請輸入密碼">
+                    </p>
+                </div>
+
+                <p class="insert_text">自介</p>
+                <p style="text-align: center;">
+                    <textarea name="text" cols=" 60" rows="6" placeholder="簡述自己"></textarea>
+                </p>
+
+                <div class="insert_select">
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

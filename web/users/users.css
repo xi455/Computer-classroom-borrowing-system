@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    color: black;
+}
+
+.header {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 1px 2px rgb(228, 228, 234);
+    display: flex;
+
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.header>h1 {
+    margin: 15px 0px 10px 20px;
+}
+
+.header>h1>a {
+    text-decoration: none;
+    color: black;
+}
+
+.header_a {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header_a>a {
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0px 30px;
+    padding: 10px;
+}
+
+.header_a>a:hover {
+    background-color: rgb(206, 233, 249);
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 140px;
+}
+
+.header_time {
+    text-align: center;
+    width: 200px;
+    border: 1px solid #999;
+}
+
+.header_work {
+    text-align: center;
+    width: 600px;
+    border: 1px solid #999;
+}
+
+.user_main {
+    width: 800px;
+    height: 500px;
+    border: 1px solid #999;
+    border-radius: 10px;
+
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(215, 214, 214);
+    border-radius: 22px;
+}
+
+.account {
+    width: 740px;
+    height: 150px;
+    border: 1px solid #999;
+    border-radius: 10px;
+
+    margin: 25px auto;
+    display: flex;
+}
+
+.account>img {
+    width: 120px;
+    border-radius: 50%;
+    margin: 10px 20px;
+}
+
+.account_mains {
+    width: 100%;
+    margin: 8px 0px;
+    padding: 8px 16px;
+    border-left: 1px solid rgb(212, 211, 211);
+
+    position: relative;
+}
+
+.account_main {
+    margin: 4px 0px;
+}
+
+.selector {
+    position: absolute;
+    right: 15px;
+    bottom: 8px;
+}
+
+.account_selector {
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid#999;
+    border-radius: 5px;
+    background-color: rgb(169, 230, 251);
+
+}
+
+.new {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.new>button {
+    width: 70px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.insert_box {
+    width: 800px;
+    height: 530px;
+    border: 1px solid #999;
+    border-radius: 10px;
+}
+
+.insert_box>form {
+    width: 100%;
+    height: 100%;
+}
+
+.insert_box>form>h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+.insert_img {
+    margin: 15px 20px;
+    border-bottom: 1px solid #999;
+
+    display: flex;
+    justify-content: center;
+}
+
+.insert_img>img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.insert_user {
+    display: flex;
+    justify-content: center;
+}
+
+.insert_user>p {
+    margin: 5px 20px;
+}
+
+.insert_user>p>input {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.insert_text {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.insert_select {
+    display: flex;
+    justify-content: center;
+}
+
+.insert_select>input {
+    width: 70px;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+
+    margin: 20px;
+    font-size: 16px;
+}
+
+.modify_box {
+    width: 800px;
+    height: 380px;
+    border: 1px solid #999;
+    border-radius: 10px;
+}
+
+.modify_box>form {
+    width: 100%;
+    height: 100%;
+}
+
+.modify_box>form>h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+.modify_user {
+    display: flex;
+    justify-content: center;
+}
+
+.modify_user>p {
+    margin: 10px 20px;
+}
+
+.modify_user>p>input {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.modify_user>p>select {
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 18px;
+}
+
+.modify_text {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.modify_select {
+    display: flex;
+    justify-content: center;
+}
+
+.modify_select>input {
+    width: 70px;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+
+    margin: 20px;
+    font-size: 16px;
+}
+
+textarea {
+    text-align: center;
+}
